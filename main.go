@@ -64,6 +64,7 @@ func main() {
 
 func greet(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Query().Get("name")
+	fmt.Println("headers", r.Header)
 	if name == "" {
 		name = "Stranger"
 	}
